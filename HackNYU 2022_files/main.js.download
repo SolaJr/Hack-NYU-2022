@@ -1,0 +1,192 @@
+const teamList = document.getElementById("team-list");
+const faqList = document.getElementById("faq-collapsable-cont");
+const sponsorList = document.getElementById("sponsor-image-container");
+
+const loadTeam = (team) => {
+  team.map((member) => {
+    let column_div = document.createElement("div");
+    column_div.className = "team-column";
+
+    let card_div = document.createElement("div");
+    card_div.className = "team-card";
+
+    let image_div = document.createElement("div");
+    image_div.className = "team-image";
+
+    let profile_img = document.createElement("img");
+    if (member.image == "") {
+      profile_img.src =
+        "https://secondchancetinyhomes.org/wp-content/uploads/2016/09/empty-profile.png";
+    } else {
+      profile_img.src = member.image;
+    }
+
+    image_div.append(profile_img);
+
+    let container_div = document.createElement("div");
+    container_div.className = "team-container";
+
+    let name_h2 = document.createElement("h2");
+    name_h2.className = "team-name";
+    name_h2.innerHTML = member.name;
+
+    let role_p = document.createElement("p");
+    role_p.className = "team-role";
+    role_p.innerHTML = member.role;
+
+    let socials_div = document.createElement("div");
+    socials_div.className = "socials";
+
+    // GitHub
+    let github_div = document.createElement("div");
+    github_div.className = "social_item";
+
+    let github_a = document.createElement("a");
+    github_a.target = "_blank";
+    if (member.githubLink != "") {
+      github_a.href = member.githubLink;
+    }
+
+    let github_i = document.createElement("i");
+    github_i.className = "fab fa-github-square fa-2x";
+
+    github_a.append(github_i);
+    github_div.append(github_a);
+    socials_div.append(github_div);
+
+    // Linkedin
+    let linkedin_div = document.createElement("div");
+    linkedin_div.className = "social_item";
+
+    let linkedin_a = document.createElement("a");
+    linkedin_a.target = "_blank";
+    if (member.linkedinLink != "") {
+      linkedin_a.href = member.linkedinLink;
+    }
+
+    let linkedin_i = document.createElement("i");
+    linkedin_i.className = "fab fa-linkedin fa-2x";
+
+    linkedin_a.append(linkedin_i);
+    linkedin_div.append(linkedin_a);
+    socials_div.append(linkedin_div);
+
+    // Info
+    let info_div = document.createElement("div");
+    info_div.className = "social_item";
+
+    let info_a = document.createElement("a");
+    info_a.target = "_blank";
+    if (member.infoLink != "") {
+      info_a.href = member.infoLink;
+    }
+
+    let info_i = document.createElement("i");
+    info_i.className = "fas fa-address-card fa-2x";
+
+    info_a.append(info_i);
+    info_div.append(info_a);
+    socials_div.append(info_div);
+
+    container_div.append(name_h2);
+    container_div.append(role_p);
+    // container_div.append(socials_div);
+
+    card_div.append(image_div);
+    card_div.append(container_div);
+
+    column_div.append(card_div);
+
+    teamList.append(column_div);
+  });
+};
+
+fetch("app/js/team_data.json").then((response) => {
+  response.json().then((data) => {
+    loadTeam(data);
+  });
+});
+
+const loadFAQ = (faqs) => {
+  faqs.map((question) => {
+    let faqOne = document.createElement("div");
+    faqOne.className = "faq-one";
+
+    let button = document.createElement("button");
+    button.className = "faq-collapsable";
+    button.type = "button";
+
+    let p = document.createElement("p");
+    p.className = "faq-question";
+    p.innerHTML = question.question;
+    button.append(p);
+
+    faqOne.append(button);
+
+    let contentDiv = document.createElement("div");
+    contentDiv.className = "faq-collapsable-content";
+
+    let contentP = document.createElement("p");
+    contentP.className = "faq-content";
+    contentP.innerHTML = question.answer;
+
+    contentDiv.append(contentP);
+
+    faqOne.append(contentDiv);
+
+    faqList.append(faqOne);
+  });
+
+  var coll = document.getElementsByClassName("faq-collapsable");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+};
+
+fetch("app/js/faq_list.json").then((response) => {
+  response.json().then((data) => {
+    loadFAQ(data);
+  });
+});
+
+const loadSponsors = (sponsors) => {
+  sponsors.forEach((sponsor) => {
+    let rowDiv = document.createElement("div");
+    rowDiv.className = "sponsors-row";
+
+    sponsor.map((spon) => {
+      let a_tag = document.createElement("a");
+      a_tag.target = "_blank";
+      if (spon.sponsorLink != "") {
+        a_tag.href = spon.sponsorLink;
+      }
+      
+      let img = document.createElement("img");
+      img.className = "sponsor-image";
+      img.src = spon.sponsorImage;
+
+      a_tag.append(img);
+
+      rowDiv.append(a_tag);
+    });
+
+    sponsorList.append(rowDiv);
+  });
+}
+
+fetch("app/js/sponsors_data.json").then((response) => {
+  response.json().then((data) => {
+    // console.log(data);
+    loadSponsors(data);
+  });
+});

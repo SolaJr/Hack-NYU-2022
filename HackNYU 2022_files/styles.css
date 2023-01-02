@@ -1,0 +1,1075 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&display=swap");
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FD726A), color-stop(61.98%, #7032F6), to(#FE5EA9));
+  background: linear-gradient(180deg, #FD726A 0%, #7032F6 61.98%, #FE5EA9 100%);
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+#mlh-trust-badge {
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  position: fixed;
+  right: 50px;
+  top: 0;
+  width: 10%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 800px) {
+  #mlh-trust-badge {
+    right: 0.5em;
+  }
+}
+
+.header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  z-index: 2;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+}
+
+.header__logo > div {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  left: 13px;
+  top: 13px;
+  border-radius: 4px;
+}
+
+.header__logo img {
+  position: absolute;
+  width: 56px;
+  height: 40px;
+  left: 0px;
+  top: 7px;
+}
+
+.header__menu {
+  margin-right: 20px;
+}
+
+.header__menu > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #FFE29D;
+}
+
+.header__menu > span:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.header__bar {
+  position: absolute;
+  left: 90px;
+  width: 1px;
+  height: 30px;
+  display: block;
+  background-color: #FFFFFF;
+}
+
+.header__links {
+  position: absolute;
+  left: 120px;
+}
+
+.header__links ul,
+.header__links li {
+  list-style-type: none;
+  display: inline;
+}
+
+.header__links a {
+  position: relative;
+  font-size: 16px;
+  color: #FFFFFF;
+  -webkit-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+  padding: 0px 20px 0px 20px;
+}
+
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+
+.header__links a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 7px;
+  background: rgba(255, 255, 255, 0.7);
+  left: 0;
+  right: 0;
+  bottom: -28px;
+  opacity: 0;
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.header__links a:hover, .header__links a.active {
+  color: #9B51E0;
+}
+
+.header__links a:hover::before, .header__links a.active::before {
+  opacity: 1;
+}
+
+.header__cta {
+  font-size: 0.875rem;
+  color: white;
+}
+
+.navigation {
+  position: static;
+  height: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 15rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation ol {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navigation li {
+  display: inline-block;
+}
+
+.navigation li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 15px 18px;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-family: "Press Start 2P", cursive;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: #9B51E0;
+}
+
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: black;
+  overflow: hidden;
+}
+
+.top {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 100px 100px 0px 100px;
+}
+
+.top .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.top .socials .social_item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.top .socials a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.top h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.top .top-content .top-title {
+  font-size: 80px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.top .top-content .top-title .top-title-nyu {
+  color: #9B51E0;
+  padding-top: 5px;
+}
+
+.top .top-content .top-date {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.top .top-content .top-input input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.top .top-content .top-input input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.top .top-content .top-input input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.top .top-content .top-input input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.top .top-content .top-input .top-input-box {
+  border: none;
+  font-family: inherit;
+  font-style: italic;
+  width: 60%;
+  height: 50px;
+  border-radius: 40px;
+  background: #f2f2f2;
+  -webkit-box-shadow: 0px 4px 20px rgba(155, 81, 224, 0.2);
+          box-shadow: 0px 4px 20px rgba(155, 81, 224, 0.2);
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+.top .top-content .top-input .top-input-button {
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 10px 20px 10px 20px;
+  height: 40px;
+  color: white;
+  -webkit-appearance: none;
+  background: #9b51e0;
+  -webkit-box-shadow: 0px 0px 12px #9b51e0;
+          box-shadow: 0px 0px 12px #9b51e0;
+  border-radius: 30px;
+}
+
+.top .top-content .top-input .mentor-button {
+  margin-top: 100px;
+}
+
+.top .top-content .typeform_link {
+  color: white;
+  text-decoration: none;
+}
+
+.top .top-content .typeform_link a,
+.top .top-content .typeform_link a:visited,
+.top .top-content .typeform_link a:hover {
+  text-decoration: none;
+  color: inherit;
+  text-shadow: 0px 0px 8px #9b51e0;
+}
+
+.top .top-content .top-query-sponsor {
+  font-style: normal;
+  color: #9B51E0;
+}
+
+.top .top-content .top-query-sponsor a,
+.top .top-content .top-query-sponsor a:visited,
+.top .top-content .top-query-sponsor a:hover {
+  text-decoration: none;
+  color: inherit;
+  text-shadow: 0px 0px 8px #9b51e0;
+}
+
+.top .top-countdown-timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5rem;
+}
+
+.top .top-countdown-timer p {
+  font-size: 80px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+.top .top-countdown-timer .timer-letter {
+  font-size: 25px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  padding: 1rem;
+  margin: 0.5rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+.top .top-countdown-timer p::after {
+  width: 100%;
+  color: white;
+  content: "";
+}
+
+@media only screen and (max-width: 800px) {
+  .top-title h1 {
+    font-size: 60px;
+  }
+  .top .top-content .top-input .top-input-box {
+    width: 80%;
+  }
+}
+
+.background {
+  display: block;
+  max-width: 100px;
+  min-width: 60px;
+  top: 0;
+  width: 10%;
+  z-index: -1;
+}
+
+.pattern1 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 60rem;
+  top: 15rem;
+}
+
+.pattern2 {
+  position: absolute;
+  opacity: 0.2;
+  width: 1065px;
+  height: 595px;
+  left: 8rem;
+  top: 18rem;
+}
+
+.pattern3 {
+  position: absolute;
+  width: 257.15px;
+  height: 290.83px;
+  left: -6rem;
+  top: 80rem;
+  opacity: 0.4;
+}
+
+.pattern4 {
+  position: absolute;
+  width: 284.7px;
+  height: 226.54px;
+  top: 25rem;
+  opacity: 0.6;
+}
+
+.patternTeam {
+  position: absolute;
+  width: 284.7px;
+  height: 5500px;
+  top: 25rem;
+  opacity: 0.6;
+}
+
+.pattern5 {
+  position: absolute;
+  left: 10rem;
+  top: 30rem;
+}
+
+.pattern6 {
+  position: absolute;
+  left: 10rem;
+  top: 27rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .pattern1 {
+    left: -150px;
+  }
+  .pattern2 {
+    right: -120px;
+  }
+  .pattern4 {
+    display: none;
+  }
+}
+
+.cat {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "text logo";
+  padding: 200px 200px 0px 200px;
+}
+
+.cat .cat-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+}
+
+.cat .cat-text .cat-title {
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.cat .cat-text .cat-title .cat-title-purple {
+  color: #9B51E0;
+}
+
+.cat .cat-text .cat-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.cat .cat-logos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  position: relative;
+  top: -100px;
+  right: -3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .cat {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+        grid-template-areas: "text" "logo";
+    padding: 1.5em 2.5em;
+    margin: 1em 0;
+  }
+  .cat .cat-text {
+    margin-bottom: 2.5em;
+  }
+  .cat .cat-text .cat-title {
+    font-size: 1.5em;
+    word-spacing: -0.5em;
+  }
+  .cat .cat-text .cat-paragraph {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+  }
+  .cat .cat-logos {
+    top: 0;
+    right: 0;
+  }
+  .cat-logos {
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.sponsors {
+  padding: 200px 100px 0px 100px;
+  position: relative;
+}
+
+.sponsors .want-to-sponsor {
+  text-align: center;
+  font-style: italic;
+  color: #9B51E0;
+}
+
+.sponsors .want-to-sponsor a,
+.sponsors .want-to-sponsor a:visited,
+.sponsors .want-to-sponsor a:hover {
+  text-decoration: none;
+  color: inherit;
+  text-shadow: 0px 0px 8px #9b51e0;
+}
+
+.sponsors .sponsor-image-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.sponsors .sponsor-image-container .sponsors-row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.sponsors .sponsor-image-container .sponsors-row .sponsor-image {
+  max-height: 200px;
+  display: inline-block;
+  padding-right: 20px;
+}
+
+.sponsors .sponsors-text {
+  text-align: center;
+  position: relative;
+}
+
+.sponsors .sponsors-text .sponsors-title {
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.sponsors .sponsors-text .sponsors-title .sponsors-title-purple {
+  color: #9B51E0;
+}
+
+.sponsors .sponsors-text .sponsors-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.sponsors .sponsors-logos {
+  position: relative;
+  top: -100px;
+  right: -3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .sponsors {
+    padding: 1.5em 2.5em;
+    margin: 1em 0;
+  }
+  .sponsors .sponsors-text {
+    margin-bottom: 2.5em;
+  }
+  .sponsors .sponsors-text .sponsors-title {
+    font-size: 1.5em;
+    word-spacing: -0.5em;
+  }
+  .sponsors .sponsors-text .sponsors-paragraph {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+  }
+  .sponsors .sponsors-logos {
+    top: 0;
+    right: 0;
+  }
+  .sponsors-logos {
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.team {
+  padding: 100px 100px 0px 100px;
+  overflow: auto;
+}
+
+.team .team-title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  margin-bottom: 5rem;
+  word-spacing: -0.8em;
+  font-family: "Press Start 2P", cursive;
+}
+
+.team .team-title .team-title-purple {
+  color: #9B51E0;
+}
+
+.team .team-list {
+  font-weight: 400;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.team .team-list .team-column {
+  display: inline-block;
+  width: 33.3%;
+  height: 10%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+
+@media screen and (max-width: 650px) {
+  .team .team-list .team-column {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.team .team-list .team-card {
+  border-radius: 20px;
+}
+
+.team .team-list .team-card .team-image {
+  top: -30px;
+  width: 50%;
+  aspect-ratio: 1/1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.team .team-list .team-card .team-image img {
+  display: inline;
+  height: 100%;
+  width: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fe59bb), to(#6931f6)) padding-box, -webkit-gradient(linear, left top, left bottom, from(#fe59bb), to(#6931f6)) border-box;
+  background: linear-gradient(#fe59bb 0%, #6931f6 100%) padding-box, linear-gradient(#fe59bb 0%, #6931f6 100%) border-box;
+  border-radius: 50em;
+  border: 6px solid transparent;
+}
+
+.team .team-list .team-container {
+  padding: 0 0 20px 0;
+  line-height: 150%;
+}
+
+.team .team-list .team-container h2,
+.team .team-list .team-container p {
+  padding: 0;
+  margin: 0;
+}
+
+.team .team-list .team-container .team-name {
+  color: white;
+  font-size: 20px;
+}
+
+.team .team-list .team-container .team-role {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+.team .team-list .team-container .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.team .team-list .team-container .socials .social_item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team .team-list .team-container .socials a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .team .team-title {
+    font-size: 2em;
+  }
+}
+
+.tracks-general {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "visual text";
+  padding: 200px 200px 0px 200px;
+}
+
+.tracks-general .tracks-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+  position: relative;
+  right: 15rem;
+}
+
+.tracks-general .tracks-text .tracks-title {
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.tracks-general .tracks-text .tracks-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.tracks-general .tracks-visual {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: visual;
+  position: relative;
+  top: -100px;
+  left: -14rem;
+}
+
+.tracks-individual-cont {
+  margin: 0 auto;
+  padding: 0 200px 0px 200px;
+}
+
+.tracks-individual-cont .tracks-individual {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  grid-row: auto auto;
+  grid-column-gap: 70px;
+  grid-row-gap: 70px;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.tracks-individual-cont .tracks-individual .tracks-name {
+  font-size: 30px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.tracks-individual-cont .tracks-individual .tracks-individual-image {
+  width: 50%;
+}
+
+@media only screen and (max-width: 768px) {
+  .tracks {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+        grid-template-areas: "text" "visual";
+    padding: 1.5em 2.5em;
+  }
+  .tracks .tracks-text {
+    margin-bottom: 2em;
+    right: 0;
+    text-align: center;
+  }
+  .tracks .tracks-text .tracks-title {
+    font-size: 1.5em;
+    word-spacing: -0.5em;
+  }
+  .tracks .tracks-text .tracks-paragraph {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+  }
+  .tracks-visual {
+    top: 0px;
+    left: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .tracks-individual-cont {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 1em;
+    grid-row-gap: 100px;
+  }
+}
+
+.faq-section {
+  padding: 100px 100px 0px 100px;
+  position: relative;
+}
+
+.faq-section .faq-one {
+  margin-top: 20px;
+}
+
+.faq-section .faq-text {
+  text-align: center;
+  position: relative;
+}
+
+.faq-section .faq-text .faq-title {
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.faq-section .faq-text .faq-title .faq-title-purple {
+  color: #9B51E0;
+}
+
+.faq-section .faq-text .faq-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.faq-section .faq-logos {
+  position: relative;
+  top: -100px;
+  right: -3rem;
+}
+
+.faq-section .faq-collapsable {
+  background-color: #9B51E0;
+  color: white;
+  cursor: pointer;
+  padding: 5px 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 17px;
+  font-family: inherit;
+  border-radius: 20px;
+}
+
+.faq-section .faq_link {
+  color: white;
+}
+
+.faq-section .faq-question::before {
+  content: url("/assets/svg/faq-plus-icon.svg");
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: inline-block;
+  width: clamp(1rem, 1.75vw, 1.5rem);
+  vertical-align: -5%;
+  margin-right: 2%;
+  top: 0%;
+}
+
+.faq-section .faq-content {
+  padding: 0 20px;
+}
+
+.faq-section .active,
+.faq-section .faq-collapsable:hover {
+  background-color: #9B51E0;
+}
+
+.faq-section .faq-collapsable-content {
+  display: none;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .faq {
+    padding: 1.5em 2.5em;
+    margin: 1em 0;
+  }
+  .faq .faq-text {
+    margin-bottom: 2.5em;
+  }
+  .faq .faq-text .faq-title {
+    font-size: 1.5em;
+    word-spacing: -0.5em;
+  }
+  .faq .faq-text .faq-paragraph {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+  }
+  .faq .faq-logos {
+    top: 0;
+    right: 0;
+  }
+  .faq-logos {
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.contactus {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "text logo";
+  padding: 200px 200px 200px 200px;
+}
+
+.contactus .contactus-text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+}
+
+.contactus .contactus-text .contactus-title {
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.contactus .contactus-text .contactus-title .contactus-title-purple {
+  color: #9B51E0;
+}
+
+.contactus .contactus-text .contactus-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.contactus .contactus-logos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: logo;
+  position: relative;
+  top: 100px;
+  right: -3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .contactus {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+        grid-template-areas: "text" "logo";
+    padding: 1.5em 2.5em;
+    margin: 1em 0;
+  }
+  .contactus .contactus-text {
+    margin-bottom: 2.5em;
+  }
+  .contactus .contactus-text .contactus-title {
+    font-size: 1.5em;
+    word-spacing: -0.5em;
+  }
+  .contactus .contactus-text .contactus-paragraph {
+    font-size: 1em;
+    letter-spacing: 0.02em;
+  }
+  .contactus .contactus-logos {
+    top: 0;
+    right: 0;
+  }
+  .contactus-logos {
+    top: 0px;
+    right: 0px;
+  }
+}
+
+.schedule {
+  padding: 150px 100px 0px 100px;
+}
+
+.schedule .schedule-title {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 8px #9b51e0;
+  margin-bottom: 5rem;
+  word-spacing: -0.8em;
+  font-family: "Press Start 2P", cursive;
+}
+
+.schedule .schedule-title .team-title-purple {
+  color: #9B51E0;
+}
+
+.schedule .schedule-image {
+  width: 100%;
+  padding-left: 50px;
+}
+/*# sourceMappingURL=styles.css.map */

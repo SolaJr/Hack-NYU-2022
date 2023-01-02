@@ -1,0 +1,93 @@
+jQuery(document).ready(function ($) {
+  (function ($) {
+    "use strict";
+
+    const nav = $("nav");
+    const navHeight = nav.outerHeight();
+
+    // choose active nav
+
+    // Get the container element
+    const btnContainer = document.getElementById("mainNav");
+
+    // Get all buttons with class="btn" inside the container
+    const btns = btnContainer.getElementsByClassName("js-scroll");
+
+    // Loop through the buttons and add the active class to the current/clicked button
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function () {
+        let current = document.getElementsByClassName("active");
+
+        // If there's no active class
+        if (current.length > 0) {
+          current[0].className = current[0].className.replace(" active", "");
+        }
+
+        // Add the active class to the current/clicked button
+        this.className += " active";
+      });
+    }
+
+    // NAVIGATION BAR
+    $('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
+      // Scroll Effect, replace hash
+      if (
+        location.pathname.replace(/^\//, "") ==
+          this.pathname.replace(/^\//, "") &&
+        location.hostname == this.hostname
+      ) {
+        let target = $(this.hash);
+        target = target.length
+          ? target
+          : $("[name=" + this.hash.slice(1) + "]");
+        if (target.length) {
+          $("html, body").animate(
+            {
+              scrollTop: target.offset().top - navHeight + 5,
+            },
+            1000
+            // "easeInOutExpo"
+          );
+          return false;
+        }
+      }
+    });
+
+    // COUNTDOWN TIMER
+
+    const countDownDate = new Date(1645826400000).getTime();
+
+    function countdown() {
+      const now = new Date().getTime();
+      console.log(countDownDate, now);
+      const distance = countDownDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24)).toLocaleString(
+        undefined,
+        { minimumIntegerDigits: 2 }
+      );
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      ).toLocaleString(undefined, { minimumIntegerDigits: 2 });
+      const minutes = Math.floor(
+        (distance % (1000 * 60 * 60)) / (1000 * 60)
+      ).toLocaleString(undefined, { minimumIntegerDigits: 2 });
+      const seconds = Math.floor(
+        (distance % (1000 * 60)) / 1000
+      ).toLocaleString(undefined, { minimumIntegerDigits: 2 });
+
+      document.getElementById("days").innerHTML = days;
+      document.getElementById("hours").innerHTML = hours;
+      document.getElementById("mins").innerHTML = minutes;
+      document.getElementById("secs").innerHTML = seconds;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "";
+      }  
+    }
+
+    countdown();
+    let timer = setInterval(countdown, 1000);
+
+  })(jQuery);
+});
